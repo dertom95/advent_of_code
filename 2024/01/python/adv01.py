@@ -1,8 +1,12 @@
+import os
+
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
 left_list = []
 right_list = []
 
-def load():
-    with open('input', 'r') as file:
+def load(input_folder):
+    with open(f'{input_folder}/../input', 'r') as file:
         for line in file:
             left,right = line.split()
             print(f'|{left}| <-> |{right}|')  # Prints each line in the file
@@ -24,6 +28,6 @@ def process():
 
     return result
 
-load()
+load(script_directory)
 result = process()    
 print(f"Result:{result}")
