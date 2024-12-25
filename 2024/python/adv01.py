@@ -6,7 +6,7 @@ left_list = []
 right_list = []
 
 def load(input_folder):
-    with open(f'{input_folder}/../01/input', 'r') as file:
+    with open(f'{input_folder}/../input/01/input', 'r') as file:
         for line in file:
             left,right = line.split()
             #print(f'|{left}| <-> |{right}|')  # Prints each line in the file

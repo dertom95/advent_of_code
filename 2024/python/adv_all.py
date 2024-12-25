@@ -8,7 +8,7 @@ def run_advent(func,text):
     result = func()
     watch.stop()
     time = watch.elapsed()
-    print(f"{text} (took:{time})")
+    print(f"{text} Result:{result} (took:{time})")
 
 run_advent(process_adv1,"Advent1")
 
