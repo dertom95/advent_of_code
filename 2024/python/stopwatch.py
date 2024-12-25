@@ -8,7 +8,7 @@ class Stopwatch:
 
     def start(self):
         if not self.running:
-            self.start_time = time.time() - self.elapsed_time  # Adjust start time
+            self.start_time = time.time() 
             self.running = True
             print("Stopwatch started.")
 
@@ -18,6 +18,14 @@ class Stopwatch:
             self.running = False
             if output:
                 print(f"Stopwatch stopped at {self.elapsed_time:.2f} seconds.")
+
+    def resume(self):
+        if self.running:
+            return
+
+        self.running = True                
+        if self.start_time==0:
+            self.start_time = time.time() 
 
     def reset(self):
         self.start_time = 0

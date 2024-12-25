@@ -28,7 +28,7 @@ def process():
 
     return result
 
-def process_adv1():
+def process_adv01():
     load(script_directory)
     result = process()    
     return result
